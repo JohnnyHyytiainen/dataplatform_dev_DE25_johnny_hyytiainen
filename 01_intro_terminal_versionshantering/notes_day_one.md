@@ -2,7 +2,10 @@
 
 ## Incheckning med lärare i kursen. Koll på klassen för att uppskatta vart kunskap finns och vilken nivå på kunskap.
 
-- Fråga till klassen om intresse för Java om tid finns över, svaret var ja. 
+- Fråga till klassen om intresse för Java om tid finns över. Svaret var ja.  
+- Fråga till klassen om intresse för att lära sig mer vad som händer med Python under huven. Svaret var ja.
+
+## Focus areas: Pandas, FastAPI, Docker, Kafka, RabbitMQ. Fixing a few dependencies regarding ETL(etl dependency framework for python).  
 
 
 ## Intro slides.
@@ -44,19 +47,26 @@
 ---
 
 
+## Data overview.
+- Vilken data sparas? 
+    - ALLT för att göra det enkelt.  
 
 
+## Open data.
 
+**Consuming Data**
+- Consuming data in programming involves accessing and utilizing information from external sources, often through APIs.  
 
+- **Open data consumption empowers** developers to create innovative solutions, enhance functionality and provide meaningful insights by connecting users wtih a wealth of accessible and structured information.
 
+## Terminologies
+- Dataset, a structured collection of related data.
+- API/WS, A set of protocols for accessing and interacting with data or services.
+- Open Data, Public available data that anyone can access, use and share.  
 
-
-
-
-
-
-
-
+## Terminal - CLI interface(Cli-gränssnitt)
+- How to move, inspect and control your system.
+- 
 
 
 
