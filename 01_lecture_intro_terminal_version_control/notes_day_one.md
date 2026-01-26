@@ -79,5 +79,7 @@
 - git rm filename
   - (tar bort en committad och pushad fil. Du måste ÄVEN committa och pusha för att få bort den ifrån github.)
 
-## 
+## Branches inom git. Vad innebär branches?
+- Förgreningar av main. För att flera kan jobba på samma projekt, förgrena main och utveckla för att sedan merge med main. Inte jobba direkt på main. **MAIN IS HOLY**
 
+- Branches är till för struktur för att ej jobba i main om main är i production. 
