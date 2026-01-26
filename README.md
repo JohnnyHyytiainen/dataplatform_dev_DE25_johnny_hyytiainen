@@ -1,0 +1,1 @@
+# Readme for programming in dataplatform development course DE25 STI
