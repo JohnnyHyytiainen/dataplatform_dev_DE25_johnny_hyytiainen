@@ -66,8 +66,8 @@
 
 ## Terminal - CLI interface(Cli-gränssnitt)
 - How to move, inspect and control your system.
+- (standard linux kommandon med git. ls, ls -a, pwd, cd .. , mkdir , googla vidare på standard linux commands. (Skiljer sig. Kunde t.ex ej köra det command lärare gjorde för att öppna. Var tvungen att använda explorer. Viss skillnad på mac och winOS + Git bash))
+
 - 
-
-
 
 
