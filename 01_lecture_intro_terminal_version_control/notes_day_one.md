@@ -68,6 +68,16 @@
 - How to move, inspect and control your system.
 - (standard linux kommandon med git. ls, ls -a, pwd, cd .. , mkdir , googla vidare på standard linux commands. (Skiljer sig. Kunde t.ex ej köra det command lärare gjorde för att öppna. Var tvungen att använda explorer. Viss skillnad på mac och winOS + Git bash))
 
-- 
+## Git and git ls, git ls-files, grep och git rm
+- Github == cloud
+- git ls-files
+  - (Visar alla icke gömda filer i projektet/repot som FINNS committade via git)
 
+- git ls-files | grep filnamn  
+  - (filtrerar resultat på beroende vad du har skrivit in) 
+
+- git rm filename
+  - (tar bort en committad och pushad fil. Du måste ÄVEN committa och pusha för att få bort den ifrån github.)
+
+## 
 
