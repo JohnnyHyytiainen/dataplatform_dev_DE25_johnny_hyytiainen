@@ -109,3 +109,14 @@ Use for client-related errors, such as malformed requests, authentication issues
 503 Service unavailable: 
 ```
 
+## Web communication (data)
+
+- API logistics, poll results, Data collection. 
+    - Vem gör vad?
+    - Vad händer bakom kulisserna?
+
+- Server, Request, Client
+
+- Det jag bör hålla koll på:
+    - Method, Headers och Protocol version. 
+
