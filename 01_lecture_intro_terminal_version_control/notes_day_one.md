@@ -70,13 +70,13 @@
 
 ## Git and git ls, git ls-files, grep och git rm
 - Github == cloud
-- git ls-files
+- `git ls-files`
   - (Visar alla icke gömda filer i projektet/repot som FINNS committade via git)
 
-- git ls-files | grep filnamn  
+- `git ls-files | grep filnamn`  
   - (filtrerar resultat på beroende vad du har skrivit in) 
 
-- git rm filename
+- `git rm filename`
   - (tar bort en committad och pushad fil. Du måste ÄVEN committa och pusha för att få bort den ifrån github.)
 
 ## Branches inom git. Vad innebär branches?
