@@ -17,3 +17,10 @@ curl -o data/raw/x.json URL -> sparar svaret till fil
 
 curl -L URL -> följer redirects
 ```
+```text
+HTTP Verb   Motsvarighet i SQL          Vad det gör
+GET             SELECT	                Hämta data. (Säkert att köra 100 ggr).
+POST	        INSERT	                Skapa ny data. (Kör du den 2 ggr får du dubbletter).
+PUT	            UPDATE	                Ersätt data helt.
+DELETE	        DELETE	                Ta bort data.
+```
