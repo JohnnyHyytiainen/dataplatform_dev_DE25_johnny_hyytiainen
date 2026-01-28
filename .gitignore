@@ -64,6 +64,14 @@ coverage.xml
 !config/*.json
 !examples/*.csv
 !seeds/*.csv
+# data/raw ska aldrig in
+data/raw/
+
+# men tillåt små fixtures/exempel
+!data/fixtures/**/*.json
+!data/fixtures/**/*.xml
+!docs/evidence/**/*.json
+!docs/evidence/**/*.xml
 
 # --- Local Databases ---
 *.sqlite
