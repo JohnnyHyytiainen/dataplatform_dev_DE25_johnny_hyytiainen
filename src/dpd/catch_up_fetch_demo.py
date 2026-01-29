@@ -26,7 +26,7 @@ def fetch_user():
         print(f"___3. Hittade: {len(data)} användare ___")
 
         # Visar min FÖRSTA användare pga index 0 = 1
-        first_user = data[0]['email']
+        first_user = data[0]
         print("\nExempeldata (JSON):")
         print(json.dumps(first_user, indent=2))
 
