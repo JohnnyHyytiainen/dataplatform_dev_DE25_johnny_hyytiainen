@@ -1,7 +1,10 @@
 from pydantic import BaseModel
 
-class UserSchema():
+class UserSchema(BaseModel):
     username: str
     password: str
+    is_enabled: bool
 
-    
+
+class UserSchemaOutput(BaseModel):
+    username: str
