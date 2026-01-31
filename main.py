@@ -32,7 +32,7 @@ def get_users() -> list[UserSchemaOutput]:
 # Fjärde endpoint
 @app.post(
     "/users",
-    response_model=UserSchema,
+    response_model=UserSchemaOutput,
     status_code=status.HTTP_201_CREATED
 )
 def post_user(user: UserSchema) -> UserSchema:
