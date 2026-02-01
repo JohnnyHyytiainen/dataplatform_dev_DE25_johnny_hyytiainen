@@ -14,7 +14,7 @@ def get_pokemon(pokemon_name: str):
     """
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
     print(f"\n Response from: {url} \n")
-    with httpx.Client() as client:
+    with httpx.Client(timeout=10.0) as client:
         response = client.get(url)
         response.raise_for_status()
         data = response.json()
@@ -28,5 +28,7 @@ if __name__ == "__main__":
             team = get_pokemon(pokemon_name)
             print(f"{team}")
 
+    except httpx.HTTPStatusError as e:
+        print(f"HTTP-fel: {e.response.status_code} för {e.request.url}")
     except Exception as e:
-        print(f"Någonting gick fel, felkod: {e}")
+        print(f"övrigt fel: {e}")
