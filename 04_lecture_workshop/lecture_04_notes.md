@@ -15,3 +15,7 @@
 
 ## PR's, Github Projects, Pair programming & workshop.
 - Pair programming tl;dr: Öppen kommunikation, soft skills är prio. 
+
+
+## Pair programming.
+- Vad ska byggas
