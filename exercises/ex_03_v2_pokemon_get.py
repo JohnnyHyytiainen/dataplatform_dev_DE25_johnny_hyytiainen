@@ -1,5 +1,4 @@
 import httpx
-from pydantic import BaseModel
 from exersice_schema.ex_03_pokemon_schema import PokemonSchema
 
 
@@ -13,7 +12,7 @@ def get_pokemon(pokemon_name: str):
     Använder mig av objekt i exercise_schema med den datan jag vill få ut
     """
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
-    print(f"\n Response from: {url} \n")
+    print(f"\nResponse from: {url}\n")
     with httpx.Client(timeout=10.0) as client:
         response = client.get(url)
         response.raise_for_status()

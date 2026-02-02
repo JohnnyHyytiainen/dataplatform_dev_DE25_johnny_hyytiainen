@@ -1,5 +1,4 @@
 import httpx
-from pydantic import BaseModel
 from exersice_schema.ex_03_pokemon_schema import PokemonSchema
 
 # EJ DRY PRINCIPEN. Hårdkodar mina pokemon jag vill ha. Nästa övning v2 == tom lista som jag itererar över

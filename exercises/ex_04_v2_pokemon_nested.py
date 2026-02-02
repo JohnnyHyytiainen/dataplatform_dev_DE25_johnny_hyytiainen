@@ -1,5 +1,4 @@
 import httpx
-from pydantic import BaseModel
 from exersice_schema.ex_04_pokemon_schema import PokemonSchema
 
 # Exercise 4 v2 GET method, nested Json.
