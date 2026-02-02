@@ -13,7 +13,7 @@ def get_pokemon(pokemon_name: str):
     Använder mig av objekt i exercise_schema med den datan jag vill få ut
     """
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name}"
-    print(f"Knock knock, anybody home? {url}")
+    print(f"\nKnock knock, anybody home? {url}")
     with httpx.Client(timeout=10.0) as client:
         response = client.get(url)
         response.raise_for_status()
@@ -25,17 +25,17 @@ if __name__ == "__main__":
     try: 
         squirt = get_pokemon("squirtle")
         print(f"Caught: {squirt.name.capitalize()}, med base EXP: {squirt.base_experience}")
-        print(f"Pokedéx ID: {squirt.id}, och ordning: {squirt.order}")
+        print(f"Pokedéx ID: {squirt.id}")
         print(f"Vikt: {squirt.weight}hekton, och längd: {squirt.height} decimeter")
 
         char = get_pokemon("charmander")
         print(f"Caught: {char.name.capitalize()}, med base EXP: {char.base_experience}")
-        print(f"Pokedéx ID: {char.id}, och ordning: {char.order}")
+        print(f"Pokedéx ID: {char.id}")
         print(f"Vikt: {char.weight}hekton, och längd: {char.height} decimeter")
 
         bulb = get_pokemon("bulbasaur")
         print(f"Caught: {bulb.name.capitalize()}, med base EXP: {bulb.base_experience}")
-        print(f"Pokedéx ID: {bulb.id}, och ordning: {bulb.order}")
+        print(f"Pokedéx ID: {bulb.id}")
         print(f"Vikt: {bulb.weight}hekton, och längd: {bulb.height} decimeter")
 
 

@@ -11,5 +11,4 @@ class PokemonSchema(BaseModel):
     base_experience: int
     id: int
     height: int
-    weight: int 
-    order: int
+    weight: int

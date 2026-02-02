@@ -27,7 +27,4 @@ class PokemonSchema(BaseModel):
     name: str
     base_experience: int
     id: int
-    height: int
-    weight: int 
-    order: int
     types: List[PokemonTypeEntry] # REF ||--|| PokemonTypeEntry objektet från nivå 2.
