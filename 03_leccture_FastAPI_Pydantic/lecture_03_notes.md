@@ -30,7 +30,7 @@
 - Function over a function
 
 ## Commands for FastAPI
-- fastapi dev FILENAME.py
+- `fastapi dev FILENAME.py`
 
 ## URL (query parameters - query param)
 Exempel URL: https://www.google.com/search?q=unicorn
