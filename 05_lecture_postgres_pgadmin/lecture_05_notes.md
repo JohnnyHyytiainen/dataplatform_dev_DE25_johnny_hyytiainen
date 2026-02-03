@@ -28,9 +28,29 @@ CREATE TABLE IF NOT EXISTS products_raw (
 );
 ```
 
-- Step 2 - Implement function for Insert (fastAPI)
+- Step 2 - Create a connection with the Database using a URL
+```python
+DATABASE_URL = "postgresql://USERNAME:PASSWORD@ADDRESS:PORT/DB_NAME"
+```
+
+
+- Step 3 - Implement function for Insert (fastAPI)
 ```postgresql
+def post_products(product: ProductSchema) -> ProductSchema:
 
+    # query-insert
+    with pool.connection() as conn:
+        insert_product(conn, product.model_dump())
+        conn.commit()
 
+    return product
+```
 
+```python
+# helper method for DB queries (can be in a seperate file for the class)
+def insert_product(conn: Connection, product: ProductSchema):
+    conn.execute(
+    "INSERT INTO products_raw (product) VALUES (%s)",
+    (Json(product),)
+    )
 ```
