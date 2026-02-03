@@ -1,5 +1,4 @@
 from fastapi import FastAPI, status
-import requests
 from schema.products_lecture_05 import ProductSchema
 
 
