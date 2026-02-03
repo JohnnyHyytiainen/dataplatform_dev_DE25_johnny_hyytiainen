@@ -4,6 +4,9 @@ from schema.user import UserSchema, UserSchemaOutput
 from schema.fox import FoxSchema
 import requests
 
+# Vill jag köra skriptet så använd 
+# python -m src.dpd.lecture_03_main
+
 userlist: list[UserSchema] = [
     UserSchema(username="Benny", password="123", is_enabled=True),
     UserSchema(username="Lenny", password="321", is_enabled=False),
