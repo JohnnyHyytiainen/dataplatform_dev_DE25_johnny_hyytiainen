@@ -1,14 +1,23 @@
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from psycopg_pool import ConnectionPool
 from psycopg.types.json import Json # För att spara listan som JSONB
+from psycopg.rows import dict_row # för att kunna få "dictionaries" och inte tuples.
 from test_db.schema.glossary_schema import GlossaryInput
 
-
+# 1. Ladda in variabler från .env filen till Pythons minne
+load_dotenv()
+# 2. Hämta värdet ifrån den
+db_url = os.getenv("DATABASE_URL")
 app = FastAPI()
 
+if not db_url:
+    raise ValueError("Ingen DATABASE_URL hittades. Se över om du har en .env fil!")
+
 # connection string
-DB_URL = "postgresql://postgres:Admin1@localhost:5432/test_db"
-pool = ConnectionPool(DB_URL)
+pool = ConnectionPool(db_url)
+print("Uppkopplad via .env(Environment Variables!)")
 
 @app.post("/glossary")
 def add_term(term_data: GlossaryInput):
@@ -41,3 +50,21 @@ def add_term(term_data: GlossaryInput):
     except Exception as e:
         # fångar exceptions, term finns redan pga UK constraint t.ex
         raise HTTPException(status_code=400, detail=str(e))
+    
+
+@app.get("/glossary")
+def get_all_terms():
+    """hämtar alla termer ifrån DB"""
+    try:
+        with pool.connection() as conn:
+            # row_factory=dict_row Säger till psycopg att ge mig mina svar som dicts och inte tuples!
+            with conn.cursor(row_factory=dict_row) as cur:
+
+                cur.execute("SELECT * FROM glossary ORDER BY id DESC")
+                results = cur.fetchall() # här hämtar den alla rader
+
+                conn.commit()
+                return results
+            
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

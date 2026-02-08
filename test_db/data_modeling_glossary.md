@@ -2,12 +2,12 @@
 
 | Glossary         | Meaning |
 | ---------------- | ------- |
-| RDBMS            |         |
-| relational model |         |
-| conceptual model |         |
-| logical model    |         |
-| physical model   |         |
-| ERD              |         |
+| RDBMS            |klar     |
+| relational model |klar     |    
+| conceptual model |klar     |
+| logical model    |klar     |
+| physical model   |klar     |
+| ERD              |klar     |
 | data modeling    |         |
 | data integrity   |         |
 | data consistency |         |
@@ -15,8 +15,8 @@
 | attribute        |         |
 | data type        |         |
 | data redundancy  |         |
-| transaction      |         |
-| cardinality      |         |
+| transaction      |klar     |
+| cardinality      |klar     |
 | one-to-one       |         |
 | one-to-many      |         |
 
