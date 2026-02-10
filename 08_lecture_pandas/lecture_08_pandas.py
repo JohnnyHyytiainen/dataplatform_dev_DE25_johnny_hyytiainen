@@ -57,8 +57,9 @@ print(f"{unclean.values}\n")
 
 # detta ersätter inte values i Series(columns) raden under kommer flagga för error direkt. Jag behöver peka på att det är en string
 # dirty_df["id"].strip()
+
+# Detta fungerar även för att göra ID och CURRENCY till UPPER
 """
-Detta fungerar även för att göra ID och CURRENCY till UPPER
 cols_to_upper = ["id", "currency"]
 dirty_df[cols_to_upper] = dirty_df[cols_to_upper].apply(lambda x: x.str.upper())
 """
@@ -67,7 +68,6 @@ dirty_df["id"] = dirty_df["id"].str.strip() # Trimmar whitespace till höger och
 dirty_df["id"] = dirty_df["id"].str.replace(" ", "").str.replace("_", "-") # Danger zone. Med _ till - ändrar du data och inte städar den(TRANSFORMERAR)
 
 # Price
-dirty_df["price"] = dirty_df["price"].str.strip()   # Trimmar whitespace till höger och vänster 
 dirty_df["price"] = dirty_df["price"].astype(float) # gör om str till float om det ska vara t.ex 550.90 SEK
 dirty_df["price"] = dirty_df["price"].astype(int)   # är det inte någonting med ören eller decimaler så _BÖR_ det vara okej med konvertering till hela integers
 
@@ -79,4 +79,42 @@ dirty_df["name"] = dirty_df["name"].str.replace(r"\s+", " ", regex = True) # Reg
 # Currency
 dirty_df["currency"] = dirty_df["currency"].str.strip().str.upper()
 
-print(dirty_df.values)
+print(f"{dirty_df.values} \n\n")
+
+
+
+
+# ====================================
+# ====================================
+# Missing data
+# ====================================
+# ====================================
+missing_df = pd.DataFrame(
+   {
+       "id": [" sku-1 ", "SKU- 2", None, "sku_4", "SKU5 "],
+       "name": [" Shoes", None, "SHIRTS", " SweaTers ", "designer  jacket"],
+       "price": [" 760 ", "520", None, "550 ", " 4500"],
+       "currency": [" sek", "SEK ", "Sek", None, " SEK"],
+   }
+)
+
+# isna() är ett tool(verktyg) för att identifiera avsaknad av värden. True = missing value.
+# isna() = visar True vart någonstans du har saknad data. Alltså vad som som saknar värde.
+print(f"{missing_df.isna()} \n")
+
+
+# Att flagga för missing values hjälper till med att välja strategi senare. Hur du ska gå till väga dvs.
+missing_df["id_missing"] = missing_df["id"].isna()
+missing_df["name_missing"] = missing_df["name"].isna()
+missing_df["price_missing"] = missing_df["price"].isna()
+missing_df["currency_missing"] = missing_df["currency"].isna()
+print(f"{missing_df} \n\n")
+
+# DRY exempel med en for-loop istället för 4 rows med variabler
+"""
+mdf_values = ["id", "name", "price", "currency"]
+for mdf in mdf_values:
+    missing_df[mdf+"-missing"] = missing_df[mdf].isna()
+print(f"{missing_df} \n\n")
+"""
+
