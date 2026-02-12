@@ -8,7 +8,7 @@
 secrets/
 
 # --- Dependency Management (uv) ---
-# Vi ignorerar miljön, men INTE uv.lock (den är vår "truth")
+# Jag ignorerar miljön, men INTE uv.lock (den är min "truth")
 .venv/
 venv/
 ENV/
@@ -18,7 +18,7 @@ env/
 __pycache__/
 *.py[cod]
 *$py.class
-# Distribution / Packaging (om vi bygger en wheel fil senare)
+# Distribution / Packaging 
 dist/
 build/
 *.egg-info/
@@ -32,7 +32,7 @@ build/
 .dmypy.json
 # Pytest cache
 .pytest_cache/
-# Coverage reports (när vi kör pytest --cov)
+# Coverage reports (när jag kör pytest --cov)
 .coverage
 htmlcov/
 coverage.xml
@@ -53,14 +53,14 @@ coverage.xml
 *.old
 
 # --- Data & Local Storage (SoC: Data lives in DB/Storage, not Git) ---
-# Ignorera faktiska datafiler så vi inte committar kunddata eller stora filer
+# Ignorera faktiska datafiler så jag inte committar kunddata eller stora filer
 *.csv
 *.tsv
 *.parquet
 *.avro
 *.json
 *.xml
-# ...men tillåt specifika config/exempel-filer om vi vill
+# ...men tillåt specifika config/exempel-filer om jag vill
 !config/*.json
 !examples/*.csv
 !seeds/*.csv
