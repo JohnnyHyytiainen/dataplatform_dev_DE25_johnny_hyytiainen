@@ -1,8 +1,8 @@
-# Lecture 08 notes
+# Lecture 07 notes
 - Todays lecture focuses on continuation from lecture 07 and PANDAS
 
 
-## lecture 07s script will be done on thursday when being in class since we had group workshop
+## lecture 06s script will be done on thursday when being in class since we had group workshop
 - Modules:
   - Pandas(theory)
   - Utility methods
