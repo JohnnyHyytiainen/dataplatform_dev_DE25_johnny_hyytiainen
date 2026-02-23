@@ -49,4 +49,18 @@ Explorativ analys/Kvalitétssäkring
     - uv add fastapi <-- Har det redan
     - uv add psycopg[binary, pool] <-- Har det redan
 
+- Se schema/product_lecture_09.py
+- Se 09_lecture_docker_basics_bonus/main.py
+```
+```text
+Docker image basics, hur en Dockerfile ska utformas:
+
+# FROM      - Image(Snapshot, vår startpunkt)
+# WORKDIR   - Working directory ("/app") - A new folder within docker, called app
+# COPY      - Extract a duplicate copy of our app (app snapshot)
+# EXPOSE    - Includes a port that OS uses
+# CMD       - Commands to be run on start up.
+
+docker build -t min-api .
+docker run -p 8000:8000 min-api
 ```
