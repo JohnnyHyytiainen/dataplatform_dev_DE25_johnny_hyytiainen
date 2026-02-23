@@ -64,3 +64,19 @@ Docker image basics, hur en Dockerfile ska utformas:
 docker build -t min-api .
 docker run -p 8000:8000 min-api
 ```
+
+**Environment variables:**
+```text
+Viktigt att komma ihåg!
+ 
+Ha med en .dockerignore fil med:
+
+.venv
+.git
+__pycache__
+.env
+
+Detta för att docker containern ska ignorera att cache hemligheter eller innehålla hemligheter i containern.
+
+
+```
