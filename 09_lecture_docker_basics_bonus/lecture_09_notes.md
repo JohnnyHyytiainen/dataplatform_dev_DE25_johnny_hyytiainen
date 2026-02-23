@@ -45,6 +45,8 @@ Explorativ analys/Kvalitétssäkring
 **Next module. Pydantic modelling:**
 ```text
 - Nytt projekt, installera lite dependencies.
-    - 
+    - uv add python-dotenv <-- Har det redan
+    - uv add fastapi <-- Har det redan
+    - uv add psycopg[binary, pool] <-- Har det redan
 
 ```

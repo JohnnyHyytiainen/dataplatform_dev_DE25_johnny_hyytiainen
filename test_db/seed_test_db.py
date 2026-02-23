@@ -10,7 +10,7 @@ API_URL = "http://127.0.0.1:8000/glossary"
 # steg 1: läs in min JSON fil jag skapat i root för att seeda.
 def seed():
     try:
-        with open("seed_test_db.json", "r", encoding="utf-8") as f:
+        with open("test_db/seed_test_db.json", "r", encoding="utf-8") as f:
             data = json.load(f)
     except FileNotFoundError:
         print("Hittade ingen seed_test_db.json fil! Se över pathing.")
