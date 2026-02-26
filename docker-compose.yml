@@ -1,0 +1,30 @@
+# TO run:
+# docker compose up --build
+
+# Services contains a list of containers
+
+
+services:
+  postgres:  # Matchar DB_HOST=postgres i din .env
+    image: postgres:16-alpine # Tips: Använd 16 för att slippa "18-strul" under lektionen
+    container_name: lecture_10_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Standardväg för v16/17
+
+  app:
+    build: .
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:

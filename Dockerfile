@@ -9,4 +9,4 @@ WORKDIR /app
 COPY pyproject.toml uv.lock* ./
 RUN uv pip install --system -r pyproject.toml
 COPY . .
-CMD ["uvicorn", "09_lecture_docker_basics_bonus.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "10_lecture_kafka_rabbitmq.lecture_10_app:app", "--host", "0.0.0.0", "--port", "8000"]
