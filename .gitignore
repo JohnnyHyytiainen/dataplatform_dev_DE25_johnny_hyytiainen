@@ -51,7 +51,7 @@ coverage.xml
 *.tmp
 *.bak
 *.old
-
+# kommentar
 # --- Data & Local Storage (SoC: Data lives in DB/Storage, not Git) ---
 # Ignorera faktiska datafiler så jag inte committar kunddata eller stora filer
 *.csv
